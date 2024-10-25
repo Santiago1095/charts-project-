@@ -7,13 +7,14 @@ import AsteroidsList from "./AsteroidsList";
 
 
 import BurbujasList from "./BurbujasList";
+import BarrasList from "./BarrasList";
 export default function Hmome(){
     return(
       <div className="container-fluid">
      
 
-
-<BurbujasList/>
+<Barras/>
+<BarrasList/>
 
 
 
