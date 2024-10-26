@@ -1,53 +1,29 @@
 import React from "react";
 import { Bubble } from "react-chartjs-2";
 
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    BubbleController,
-    PointElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from "chart.js";
+export default function BurbujasDi({ data }) {
+  const options = {};
 
- 
+  const chartData = {
+    datasets: [
+      {
+        label: "Temperature",
+        data: data,
+        fill: true,
+        backgroundColor:"rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        tension: 0.1,
+      },
+    ],
+  };
 
-  ChartJS.register(
-    CategoryScale,
-    BubbleController,
-    PointElement,
-    Title,
-    Tooltip,
-    Legend
-  );
-
-export default function BurbujasDi({ browse }) {
-
-    const options = {};
-
-
+  if (data.lenght === 0) {
+    return <div>loading</div>;
+  }
 
   return (
-    
     <div className="py-5 text-center">
-        <Bubble options={options} data={{
-    datasets: [{
-    label: `${browse.name}`,
-    data: [{
-      x: `${browse.estimated_diameter.kilometers.estimated_diameter_min}`,
-      y: `${browse.estimated_diameter.kilometers.estimated_diameter_max}`,
-      r: 15
-    }, ],
-    backgroundColor: 'rgb(255, 99, 132)'
-  }]
-}} />;
-        
-      <h2>Id:{browse.id}</h2>
-      <h2>Name:{browse.name}</h2>
-      <h2>First Observation:{browse.orbital_data.first_observation_date}</h2>
-      <h2>Diameter Min:{browse.estimated_diameter.kilometers.estimated_diameter_min}</h2>
-      <h2>Diameter Max:{browse.estimated_diameter.kilometers.estimated_diameter_max}</h2>
+      <Bubble options={options} data={chartData} />
     </div>
   );
 }

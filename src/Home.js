@@ -1,24 +1,10 @@
-import Lineas from "./Lineas";
-import Burbujas from "./Burbujas";
-import Barras from "./Barras";
-import Asteroids from "./Asteroids";
-import AsteroidsList from "./AsteroidsList";
 
+import BubbleSection from "./BubbleSection";
 
-
-import BurbujasList from "./BurbujasList";
-import BarrasList from "./BarrasList";
-export default function Hmome(){
-    return(
-      <div className="container-fluid">
-     
-
-<Barras/>
-<BarrasList/>
-
-
-
-
-      </div>
-    )
+export default function Hmome() {
+  return (
+    <div className="container-fluid  py-5">
+      <BubbleSection />
+    </div>
+  );
 }

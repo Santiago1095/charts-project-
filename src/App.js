@@ -6,6 +6,29 @@ import "./App.css";
 
 import Hmome from "./Home";
 
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BubbleController,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BubbleController,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 export default function App() {
   return (
     <BrowserRouter>
