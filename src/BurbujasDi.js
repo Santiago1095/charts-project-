@@ -31,7 +31,7 @@ export default function BurbujasDi({ data,  }) {
   }
 
   return (
-    <div className="py-5 text-center">
+    <div className="py-1 text-center">
       <Bubble options={options} data={chartData} />
     </div>
   );
