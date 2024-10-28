@@ -32,7 +32,7 @@ export default function BurbujasDi({ data,  }) {
 
   return (
     <div className="py-1 text-center">
-      <Bubble options={options} data={chartData} />
+      <Bubble options={options} data={chartData} className="bg-white py-4"/>
     </div>
   );
 }
